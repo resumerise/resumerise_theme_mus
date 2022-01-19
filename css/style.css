@@ -1,28 +1,26 @@
 /*========== GOOGLE FONT ==========*/
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*========== VARIABLE CSS ==========*/
 :root {
     --header-height: 3rem;
 
     /*========== COLORS ==========*/
-    --first-color: hsl(220, 100%, 65%);
-    --first-color-second: hsl(220, 69%, 61%);
-    --first-color-alt: hsl(220, 57%, 53%);
-    --first-color-lighter: hsl(220, 69%, 61%);
+    --first-color: hsl(244, 100%, 57%);
+    --first-color-second: hsl(244, 69%, 61%);
+    --first-color-alt: hsl(244, 57%, 53%);
+    --first-color-lighter: hsl(244, 69%, 61%);
     --first-color-lighter-dark: #292523;
-    --article-title: #363978;
-    --home-title-color: #45423C;
-    --title-color: #292523;
-    --text-color: #7c706a;
-    --text-color-light: #ada39f;
+    --title-color: #00020B;
+    --text-color: #5C5859;
+    --text-color-light: #A29697;
+    --yellow-color: #F9E32B;
     --body-color: #fefcfb;
     --white-color: white;
     --black-color: black;
 
     /*========== FONT & TYPORGRAPHY ==========*/
     --body-font: 'Poppins', sans-serif;
-    --second-font: 'Playfair Display', serif;
     --biggest-font-size: 4rem;
     --bigger-font-size: 3rem;
     --big-font-size: 2rem;
@@ -153,27 +151,36 @@ article {
 }
 
 .article__title {
-    position: relative;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
     font-weight: var(--font-600);
     font-size: var(--h2-font-size);
+    color: var(--first-color);
 }
 
 .article__subtitle {
-    font-weight: var(--font-700);
+    font-weight: var(--font-600);
     font-size: var(--h3-font-size);
-    font-family: var(--second-font);
-    color: var(--home-title-color);
+    color: var(--text-color);
 }
 
-.article__url {
-    color: #7F7D7B;
+.article__date {
+    color: var(--text-color-light);
+}
+
+.article__url a {
+    color: var(--text-color);
 }
 
 .article__description {
     margin-top: var(--mb-1);
+}
+
+.article__description,
+.article__list {
+    margin-bottom: var(--mb-0-5);
+}
+
+.list__label {
+    font-weight: var(--font-500);
 }
 
 /*========== LAYOUT ==========*/
@@ -198,7 +205,7 @@ article {
 .s-grid {
     display: -ms-grid;
     display: grid;
-    gap: var(--mb-1);
+    gap: var(--mb-0-25);
 }
 
 .a-grid {
@@ -228,14 +235,11 @@ article {
 
 /*========== HOME SECTION ==========*/
 .profile__img {
-    margin: auto;
     display: block;
+    margin: auto;
+    width: 260px;
     margin-bottom: var(--mb-1);
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
+    border-radius: .5rem;
 }
 
 .home__title {
@@ -243,29 +247,61 @@ article {
     font-weight: var(--font-800);
     line-height: 1.2;
     margin-top: var(--mb-1);
+    color: var(--first-color);
 }
 
 .home__subtitle {
     font-weight: 600;
     font-size: var(--h3-font-size);
     line-height: 1;
+    margin-top: var(--mb-0-75);
+}
+
+.home__info-container {
     margin-top: var(--mb-0-5);
+}
+
+.home__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: var(--mb-0-75);
+}
+
+.home__info,
+.home__info a,
+.home__description {
+    color: var(--text-color);
 }
 
 .home__description {
     margin-top: var(--mb-1);
 }
 
+.home__title,
+.home__subtitle,
+.home__description {
+    text-align: center;
+}
+
 /*========== PROFILES ==========*/
-.profiles .article-container {
-    display: flex;
-    flex-direction: row;
-    column-gap: 2em;
+.profile__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    row-gap: 2rem;
+    justify-items: center;
+    align-items: center;
 }
 
 .profiles .icon {
     font-size: 1.5em;
-    color: var(--icon-social-color);
+    color: var(--text-color);
+}
+
+/*========== LANGUAGES ==========*/
+.languages .languages__description {
+    margin-top: var(--mb-0-25);
+    margin-bottom: var(--mb-1);
 }
 
 /*========== ICONS ==========*/
@@ -355,6 +391,33 @@ article {
 
     .main {
         margin: auto;
+    }
+
+    .basics,
+    .main-wrapper {
+        display: grid;
+        grid-template-columns: 1fr .5fr;
+    }
+
+    .profile__img {
+        width: 400px;
+        margin-left: initial;
+    }
+
+    .home__title,
+    .home__subtitle,
+    .home__description {
+        text-align: initial;
+    }
+
+    .home__info {
+        justify-content: flex-start;
+    }
+
+    .profiles .article-container {
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+        justify-items: flex-start;
     }
 
 }
