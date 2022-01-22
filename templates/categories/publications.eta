@@ -1,8 +1,11 @@
 <section class="publications section" id="publications">
-	<% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></header>
-	<% } %>
-    <div class="article-container grid">
+    <div>
+        <% if(it.resume.settings?.labels?.categoryProperty?.publication?.categoryTitle) { %>
+            <header class="section__title"><%= it.resume.settings.labels.categoryProperty.publication.categoryTitle %></header>
+        <% } %>
+    </div>
+
+	<div class="article-container grid">
         <% it.resume?.publications.forEach(function(publication) { %>
             <article>
                 <%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.publication, id: publication.id, showDelete: true}) %>

@@ -1,7 +1,10 @@
 <section class="profiles section" id="profiles">
-    <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
-        <header class="section__title"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></header>
-    <% } %>
+    <div>
+        <% if(it.resume.settings?.labels?.categoryProperty?.profile?.categoryTitle) { %>
+            <header class="section__title"><%= it.resume.settings.labels.categoryProperty.profile.categoryTitle %></header>
+        <% } %>
+    </div>
+
     <div class="article-container profile__container">
         <% it.resume.basics.profiles?.forEach(function(profile){ %>
             <article>

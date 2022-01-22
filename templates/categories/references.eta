@@ -1,7 +1,10 @@
-<section class="references stion" id="references">
-	<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
-	<% } %>
+<section class="references section" id="references">
+	<div>
+		<% if(it.resume.settings?.labels?.categoryProperty?.reference?.categoryTitle) { %>
+			<header class="section__title"><%= it.resume.settings.labels.categoryProperty.reference.categoryTitle %></header>
+		<% } %>
+	</div>
+	
 	<div class="article-container grid">
 		<% it.resume?.references.forEach(function(reference) { %>
 			<article>
@@ -23,5 +26,7 @@
 			</article>
 		<% }) %>
 		<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference}) %>
+		 <div class="box-v animate__animated animate__zoomInLeft animate__infinite"></div>
+        <div class="line-v animate__animated animate__zoomInUp animate__infinite"></div>
 	</div>
 </section>

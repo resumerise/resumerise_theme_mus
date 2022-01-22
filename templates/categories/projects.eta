@@ -1,7 +1,10 @@
 <section class="project section" id="project">
-	<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
-	<% } %>
+	<div>
+		<% if (it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle) { %>
+			<header class="section__title"><%= it.resume.settings?.labels?.categoryProperty?.project?.categoryTitle %></header>
+		<% } %>
+	</div>
+	
 	<div class="article-container grid">
 		<% it.resume?.projects.forEach(function(project) { %>
 			<article>

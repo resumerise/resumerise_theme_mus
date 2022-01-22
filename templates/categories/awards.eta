@@ -1,7 +1,10 @@
 <section class="awards section" id="awards">
-	<% if(it.resume.settings?.labels?.categoryProperty?.award?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.award.categoryTitle %></header>
-	<% } %>
+	<div>
+    	<% if(it.resume.settings?.labels?.categoryProperty?.award?.categoryTitle) { %>
+			<header class="section__title"><%= it.resume.settings.labels.categoryProperty.award.categoryTitle %></header>
+		<% } %>
+	</div>
+    
 	<div class="article-container grid">
 		<% it.resume?.awards.forEach(function(award) { %>
 			<article>

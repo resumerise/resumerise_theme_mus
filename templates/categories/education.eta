@@ -1,7 +1,10 @@
 <section class="education section" id="education">
-	<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
-		<header class="section__title"><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></header>
-	<% } %>
+	<div>
+		<% if(it.resume.settings?.labels?.categoryProperty?.education?.categoryTitle) { %>
+			<header class="section__title"><%= it.resume.settings.labels.categoryProperty.education.categoryTitle %></header>
+		<% } %>
+	</div>
+    
 	<div class="article-container grid">
 		<% it.resume?.education.forEach(function(education) { %>
 			<article>
