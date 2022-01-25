@@ -121,7 +121,10 @@ ul {
 
 li {
     margin-left: 2rem;
-    list-style: circle;
+}
+
+li::marker {
+    color: hsl(244, 100%, 70%);
 }
 
 a {
@@ -403,6 +406,12 @@ article {
     background: #1e2b27;
 }
 
+@media (max-width: 768px) {
+    .animate__animated {
+        animation: none;
+        z-index: -1;
+    }
+}
 
 /*========== MEDIA QUERIES ==========*/
 @media screen and (max-width: 330px) {
