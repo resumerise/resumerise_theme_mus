@@ -97,17 +97,5 @@
 				</div>
 			</div>
 		</main>
-
-		<% /* <script>
-		const animElement = document.querySelector('.animate__animated');
-		animElement.classList.add('animate__animated');
-
-		var bWidth = document.body.clientWidth;
-		if (bWidth < 768) {
-			animElement.classList.remove('animate__animated')
-		} else if (bWidth >= 769) {
-			animElement.classList.add('animate__animated')
-		};
-		</script> */ %>
 	</body>
 </html>
