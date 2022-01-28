@@ -271,9 +271,17 @@ article {
 }
 
 .home__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-column-gap: var(--mb-0-75);
+    -moz-column-gap: var(--mb-0-75);
     column-gap: var(--mb-0-75);
 }
 
@@ -322,10 +330,13 @@ article {
 
 /*========== PROFILES ==========*/
 .profile__container {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     row-gap: 2rem;
     justify-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -408,6 +419,7 @@ article {
 
 @media (max-width: 768px) {
     .animate__animated {
+        -webkit-animation: none;
         animation: none;
         z-index: -1;
     }
@@ -435,7 +447,9 @@ article {
     }
 
     .basics {
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: repeat(2, 1fr);
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -496,8 +510,12 @@ article {
 
     .main-wrapper .section {
         position: relative;
+        display: -ms-grid;
         display: grid;
+        -ms-grid-columns: .6fr var(--mb-2) 1fr;
         grid-template-columns: .6fr 1fr;
+        -webkit-column-gap: var(--mb-2);
+        -moz-column-gap: var(--mb-2);
         column-gap: var(--mb-2);
     }
 
@@ -536,10 +554,13 @@ article {
     }
 
     .home__info {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 
     .profiles .article-container {
+        -ms-grid-columns: 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr 2rem 1fr;
         grid-template-columns: repeat(12, 1fr);
         gap: 2rem;
         justify-items: flex-start;
