@@ -42,9 +42,9 @@
             value: it.resume.basics.summary,
             classes: 'article__description home__description'
         }) %>
-        <div class="circle animate__animated animate__jello animate__infinite"></div>
-        <div class="outer-circle animate__animated animate__wobble animate__infinite"></div>
-        <div class="box animate__animated animate__lightSpeedInRight"></div>
-        <div class="line animate__animated animate__fadeInRight"></div>
+        <div class="circle animate__animated animate__jello"></div>
+        <div class="outer-circle animate__animated animate__wobble"></div>
+        <div data-aos="fade-left" class="box"></div>
+        <div data-aos="fade-left" class="line"></div>
     </div>
 </section>

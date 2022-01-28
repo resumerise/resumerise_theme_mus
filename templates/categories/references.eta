@@ -26,7 +26,7 @@
 			</article>
 		<% }) %>
 		<%~ include('nav', {categoryKey: it.resume?.settings?.categoryKeys?.reference}) %>
-		 <div class="box-v animate__animated animate__zoomInLeft"></div>
-        <div class="line-v animate__animated animate__zoomInUp"></div>
+		<div data-aos="fade-right" class="box-v"></div>
+        <div data-aos="fade-right" class="line-v"></div>
 	</div>
 </section>
