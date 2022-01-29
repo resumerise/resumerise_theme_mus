@@ -102,9 +102,15 @@
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="https://unpkg.com/scrollreveal"></script>
 		<script>
-			AOS.init();
-			ScrollReveal().reveal('.box');
-			ScrollReveal().reveal('.line');
+		AOS.init();
+		const sr = ScrollReveal({
+			distance: '30px',
+			duration: 1800,
+			reset: true,
+		});
+		sr.reveal(`.box, .line`, {
+			origin: 'right'
+		})
 		</script>
 	</body>
 </html>
