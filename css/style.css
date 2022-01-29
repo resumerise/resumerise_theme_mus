@@ -90,12 +90,12 @@ body {
 }
 
 ::-moz-selection {
-    background: #5e5e5e;
+    background: hsl(244, 100%, 77%);
     color: white;
 }
 
 ::selection {
-    background: #5e5e5e;
+    background: hsl(244, 100%, 77%);
     color: white;
 }
 
